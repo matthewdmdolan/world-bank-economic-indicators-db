@@ -60,4 +60,4 @@ for row in rows:
 # NEED TO ASSIGN DATATYPES
 
 # Don't forget to close the connection
-conn.close()
+#conn.close()
