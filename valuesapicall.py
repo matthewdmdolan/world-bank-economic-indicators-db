@@ -40,10 +40,6 @@ combined = combined[1]
 with open('output_combined.json', 'w') as f:
     json.dump(combined, f, indent=10)
 
-# i think all values are null???? - checking below
-
-# json normalise was suggesting to use max_level 1 which was very inefficient as introduced all columns which is sub-optimal
-
 extracted_combined = [
     {
         'id': item['indicator']['id'],

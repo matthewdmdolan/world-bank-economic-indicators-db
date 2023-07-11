@@ -10,10 +10,6 @@ print(r.status_code)
 countries = r.json()
 print(countries)
 
-"The JSON object is a list where the first item is a dictionary of metadata, " \
-"and the second item is a list of country " \
-"data, each represented as a dictionary with further nested dictionaries."
-
 # access first element in list so we can avoid metadata list and access country info
 countries = countries[1]
 
@@ -21,8 +17,7 @@ countries = countries[1]
 with open('output_countries.json', 'w') as f:
     json.dump(countries, f, indent=10)
 
-# Initialize an empty and declaring json normalise was suggesting to use max_level 1 which was very inefficient as
-# introduced all columns which is sub-optimal
+# loops through json to extract fields defined below
 extracted_countries = [
     {
         'id': item['id'],
@@ -55,7 +50,7 @@ rows = cursor.fetchall()
 for row in rows:
     print(row)
 
-##Checking datatypes none given
+# Checking datatypes none given
 cursor.execute("PRAGMA table_info(countries)")
 rows = (cursor.fetchall())
 
