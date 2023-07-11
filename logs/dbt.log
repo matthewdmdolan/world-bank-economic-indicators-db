@@ -131,3 +131,207 @@ https://docs.getdbt.com/docs/configure-your-profile
 [0m19:11:28.556501 [debug] [MainThread]: Connection 'debug' was properly closed.
 [0m19:11:28.560626 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa3c1029250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa3c1029050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa3c1029790>]}
 [0m19:11:28.563664 [debug] [MainThread]: Flushing usage events
+[0m19:13:48.725297 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9bf6819f50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9bf6829350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9bf6829050>]}
+
+
+============================== 19:13:48.734889 | df84a5b5-775a-44ef-9ab1-93d5babeb0b9 ==============================
+[0m19:13:48.734889 [info ] [MainThread]: Running with dbt=1.5.2
+[0m19:13:48.736062 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': '/Users/mattdolan/.dbt', 'log_path': 'logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m19:13:48.737144 [info ] [MainThread]: dbt version: 1.5.2
+[0m19:13:48.737893 [info ] [MainThread]: python version: 3.7.4
+[0m19:13:48.738550 [info ] [MainThread]: python path: /Users/mattdolan/Documents/pythondata/Pycharm/world-bank-wdi-db/bin/python
+[0m19:13:48.739219 [info ] [MainThread]: os info: Darwin-22.5.0-x86_64-i386-64bit
+[0m19:13:48.739886 [info ] [MainThread]: Using profiles.yml file at /Users/mattdolan/.dbt/profiles.yml
+[0m19:13:48.740802 [info ] [MainThread]: Using dbt_project.yml file at /Users/mattdolan/PycharmProjects/world-bank-wdi-db/dbt_project.yml
+[0m19:13:48.741548 [info ] [MainThread]: Configuration:
+[0m19:13:48.823066 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m19:13:48.824215 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m19:13:48.824983 [info ] [MainThread]: Required dependencies:
+[0m19:13:48.826056 [debug] [MainThread]: Executing "git --help"
+[0m19:13:48.873192 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone             Clone a repository into a new directory\n   init              Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add               Add file contents to the index\n   mv                Move or rename a file, a directory, or a symlink\n   restore           Restore working tree files\n   rm                Remove files from the working tree and from the index\n   sparse-checkout   Initialize and modify the sparse-checkout\n\nexamine the history and state (see also: git help revisions)\n   bisect            Use binary search to find the commit that introduced a bug\n   diff              Show changes between commits, commit and working tree, etc\n   grep              Print lines matching a pattern\n   log               Show commit logs\n   show              Show various types of objects\n   status            Show the working tree status\n\ngrow, mark and tweak your common history\n   branch            List, create, or delete branches\n   commit            Record changes to the repository\n   merge             Join two or more development histories together\n   rebase            Reapply commits on top of another base tip\n   reset             Reset current HEAD to the specified state\n   switch            Switch branches\n   tag               Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch             Download objects and refs from another repository\n   pull              Fetch from and integrate with another repository or a local branch\n   push              Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m19:13:48.875002 [debug] [MainThread]: STDERR: "b''"
+[0m19:13:48.875641 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m19:13:48.876474 [info ] [MainThread]: Connection:
+[0m19:13:48.877335 [info ] [MainThread]:   database: <database name>
+[0m19:13:48.878059 [info ] [MainThread]:   schema: main
+[0m19:13:48.879086 [info ] [MainThread]:   schemas_and_paths: {'main': '/my_project/data/etl.db'}
+[0m19:13:48.879825 [info ] [MainThread]:   schema_directory: /my_project/data
+[0m19:13:48.882161 [info ] [MainThread]: Registered adapter: sqlite=1.4.0
+[0m19:13:48.883939 [debug] [MainThread]: Acquiring new sqlite connection 'debug'
+[0m19:13:48.884628 [debug] [MainThread]: Using sqlite connection "debug"
+[0m19:13:48.885176 [debug] [MainThread]: On debug: select 1 as id
+[0m19:13:48.885699 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m19:13:48.890849 [debug] [MainThread]: On debug: No close available on handle
+[0m19:13:48.892089 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m19:13:48.893025 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m19:13:48.894086 [info ] [MainThread]: Could not load dbt_project.yml
+
+[0m19:13:48.894841 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Runtime Error
+  Database Error
+    unable to open database file
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m19:13:48.896080 [debug] [MainThread]: Command `dbt debug` failed at 19:13:48.895837 after 0.21 seconds
+[0m19:13:48.896746 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m19:13:48.897412 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9bf66e1d10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9bf6829390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9bf6829110>]}
+[0m19:13:48.898215 [debug] [MainThread]: Flushing usage events
+[0m19:15:20.209974 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe4ce0260d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe4ce026410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe4ce026090>]}
+
+
+============================== 19:15:20.220270 | 1ac5bd82-ff67-4ff0-8c0a-5be320cb6f8e ==============================
+[0m19:15:20.220270 [info ] [MainThread]: Running with dbt=1.5.2
+[0m19:15:20.221629 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': 'logs', 'profiles_dir': '/Users/mattdolan/.dbt', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m19:15:20.222713 [info ] [MainThread]: dbt version: 1.5.2
+[0m19:15:20.223432 [info ] [MainThread]: python version: 3.7.4
+[0m19:15:20.224108 [info ] [MainThread]: python path: /Users/mattdolan/Documents/pythondata/Pycharm/world-bank-wdi-db/bin/python
+[0m19:15:20.224781 [info ] [MainThread]: os info: Darwin-22.5.0-x86_64-i386-64bit
+[0m19:15:20.225448 [info ] [MainThread]: Using profiles.yml file at /Users/mattdolan/.dbt/profiles.yml
+[0m19:15:20.226352 [info ] [MainThread]: Using dbt_project.yml file at /Users/mattdolan/PycharmProjects/world-bank-wdi-db/dbt_project.yml
+[0m19:15:20.227196 [info ] [MainThread]: Configuration:
+[0m19:15:20.302734 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m19:15:20.303893 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m19:15:20.304849 [info ] [MainThread]: Required dependencies:
+[0m19:15:20.305904 [debug] [MainThread]: Executing "git --help"
+[0m19:15:20.329174 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone             Clone a repository into a new directory\n   init              Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add               Add file contents to the index\n   mv                Move or rename a file, a directory, or a symlink\n   restore           Restore working tree files\n   rm                Remove files from the working tree and from the index\n   sparse-checkout   Initialize and modify the sparse-checkout\n\nexamine the history and state (see also: git help revisions)\n   bisect            Use binary search to find the commit that introduced a bug\n   diff              Show changes between commits, commit and working tree, etc\n   grep              Print lines matching a pattern\n   log               Show commit logs\n   show              Show various types of objects\n   status            Show the working tree status\n\ngrow, mark and tweak your common history\n   branch            List, create, or delete branches\n   commit            Record changes to the repository\n   merge             Join two or more development histories together\n   rebase            Reapply commits on top of another base tip\n   reset             Reset current HEAD to the specified state\n   switch            Switch branches\n   tag               Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch             Download objects and refs from another repository\n   pull              Fetch from and integrate with another repository or a local branch\n   push              Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m19:15:20.331676 [debug] [MainThread]: STDERR: "b''"
+[0m19:15:20.334604 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m19:15:20.337398 [info ] [MainThread]: Connection:
+[0m19:15:20.338242 [info ] [MainThread]:   database: <database name>
+[0m19:15:20.339105 [info ] [MainThread]:   schema: main
+[0m19:15:20.339788 [info ] [MainThread]:   schemas_and_paths: {'main': '/my_project/data/etl.db'}
+[0m19:15:20.340494 [info ] [MainThread]:   schema_directory: /my_project/data
+[0m19:15:20.343250 [info ] [MainThread]: Registered adapter: sqlite=1.4.0
+[0m19:15:20.345241 [debug] [MainThread]: Acquiring new sqlite connection 'debug'
+[0m19:15:20.346136 [debug] [MainThread]: Using sqlite connection "debug"
+[0m19:15:20.346916 [debug] [MainThread]: On debug: select 1 as id
+[0m19:15:20.347992 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m19:15:20.355123 [debug] [MainThread]: On debug: No close available on handle
+[0m19:15:20.356004 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m19:15:20.356750 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m19:15:20.357457 [info ] [MainThread]: Could not load dbt_project.yml
+
+[0m19:15:20.358144 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Runtime Error
+  Database Error
+    unable to open database file
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m19:15:20.359348 [debug] [MainThread]: Command `dbt debug` failed at 19:15:20.359103 after 0.19 seconds
+[0m19:15:20.360015 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m19:15:20.360659 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe4ce03fa90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe4ce026290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe4ce026350>]}
+[0m19:15:20.361471 [debug] [MainThread]: Flushing usage events
+[0m19:17:18.224367 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa24e018990>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa24e026350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa24e026050>]}
+
+
+============================== 19:17:18.234252 | 78283851-4623-4e30-ab51-ea5a3d983f04 ==============================
+[0m19:17:18.234252 [info ] [MainThread]: Running with dbt=1.5.2
+[0m19:17:18.235671 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': '/Users/mattdolan/PycharmProjects/world-bank-wdi-db/logs', 'fail_fast': 'False', 'profiles_dir': '/Users/mattdolan/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m19:17:18.236656 [info ] [MainThread]: dbt version: 1.5.2
+[0m19:17:18.237387 [info ] [MainThread]: python version: 3.7.4
+[0m19:17:18.238071 [info ] [MainThread]: python path: /Users/mattdolan/Documents/pythondata/Pycharm/world-bank-wdi-db/bin/python
+[0m19:17:18.238754 [info ] [MainThread]: os info: Darwin-22.5.0-x86_64-i386-64bit
+[0m19:17:18.239429 [info ] [MainThread]: Using profiles.yml file at /Users/mattdolan/.dbt/profiles.yml
+[0m19:17:18.240264 [info ] [MainThread]: Using dbt_project.yml file at /Users/mattdolan/PycharmProjects/world-bank-wdi-db/dbt_project.yml
+[0m19:17:18.240987 [info ] [MainThread]: Configuration:
+[0m19:17:18.320374 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m19:17:18.362400 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m19:17:18.363395 [info ] [MainThread]: Required dependencies:
+[0m19:17:18.365045 [debug] [MainThread]: Executing "git --help"
+[0m19:17:18.391623 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone             Clone a repository into a new directory\n   init              Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add               Add file contents to the index\n   mv                Move or rename a file, a directory, or a symlink\n   restore           Restore working tree files\n   rm                Remove files from the working tree and from the index\n   sparse-checkout   Initialize and modify the sparse-checkout\n\nexamine the history and state (see also: git help revisions)\n   bisect            Use binary search to find the commit that introduced a bug\n   diff              Show changes between commits, commit and working tree, etc\n   grep              Print lines matching a pattern\n   log               Show commit logs\n   show              Show various types of objects\n   status            Show the working tree status\n\ngrow, mark and tweak your common history\n   branch            List, create, or delete branches\n   commit            Record changes to the repository\n   merge             Join two or more development histories together\n   rebase            Reapply commits on top of another base tip\n   reset             Reset current HEAD to the specified state\n   switch            Switch branches\n   tag               Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch             Download objects and refs from another repository\n   pull              Fetch from and integrate with another repository or a local branch\n   push              Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m19:17:18.393042 [debug] [MainThread]: STDERR: "b''"
+[0m19:17:18.393654 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m19:17:18.394377 [info ] [MainThread]: Connection:
+[0m19:17:18.395138 [info ] [MainThread]:   database: <database name>
+[0m19:17:18.395905 [info ] [MainThread]:   schema: main
+[0m19:17:18.396688 [info ] [MainThread]:   schemas_and_paths: {'main': '/my_project/data/etl.db'}
+[0m19:17:18.397362 [info ] [MainThread]:   schema_directory: /my_project/data
+[0m19:17:18.400108 [info ] [MainThread]: Registered adapter: sqlite=1.4.0
+[0m19:17:18.403370 [debug] [MainThread]: Acquiring new sqlite connection 'debug'
+[0m19:17:18.405173 [debug] [MainThread]: Using sqlite connection "debug"
+[0m19:17:18.405857 [debug] [MainThread]: On debug: select 1 as id
+[0m19:17:18.406644 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m19:17:18.410413 [debug] [MainThread]: On debug: No close available on handle
+[0m19:17:18.412173 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m19:17:18.413370 [info ] [MainThread]: [31m1 check failed:[0m
+[0m19:17:18.414509 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Runtime Error
+  Database Error
+    unable to open database file
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m19:17:18.416577 [debug] [MainThread]: Command `dbt debug` failed at 19:17:18.416203 after 0.23 seconds
+[0m19:17:18.417943 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m19:17:18.419074 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa24e0ceb50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa24e0cead0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa24e0ce350>]}
+[0m19:17:18.420808 [debug] [MainThread]: Flushing usage events
+[0m19:18:40.447218 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbd9680ae50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbd9680ae90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbd9680add0>]}
+
+
+============================== 19:18:40.457515 | 66797c05-f393-4745-bb4c-2a1e029c15c9 ==============================
+[0m19:18:40.457515 [info ] [MainThread]: Running with dbt=1.5.2
+[0m19:18:40.458908 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': '/Users/mattdolan/PycharmProjects/world-bank-wdi-db/logs', 'profiles_dir': '/Users/mattdolan/.dbt', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m19:18:40.459900 [info ] [MainThread]: dbt version: 1.5.2
+[0m19:18:40.460620 [info ] [MainThread]: python version: 3.7.4
+[0m19:18:40.461305 [info ] [MainThread]: python path: /Users/mattdolan/Documents/pythondata/Pycharm/world-bank-wdi-db/bin/python
+[0m19:18:40.461989 [info ] [MainThread]: os info: Darwin-22.5.0-x86_64-i386-64bit
+[0m19:18:40.462666 [info ] [MainThread]: Using profiles.yml file at /Users/mattdolan/.dbt/profiles.yml
+[0m19:18:40.463432 [info ] [MainThread]: Using dbt_project.yml file at /Users/mattdolan/PycharmProjects/world-bank-wdi-db/dbt_project.yml
+[0m19:18:40.464130 [info ] [MainThread]: Configuration:
+[0m19:18:40.550232 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m19:18:40.599771 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m19:18:40.600620 [info ] [MainThread]: Required dependencies:
+[0m19:18:40.601853 [debug] [MainThread]: Executing "git --help"
+[0m19:18:40.631597 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone             Clone a repository into a new directory\n   init              Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add               Add file contents to the index\n   mv                Move or rename a file, a directory, or a symlink\n   restore           Restore working tree files\n   rm                Remove files from the working tree and from the index\n   sparse-checkout   Initialize and modify the sparse-checkout\n\nexamine the history and state (see also: git help revisions)\n   bisect            Use binary search to find the commit that introduced a bug\n   diff              Show changes between commits, commit and working tree, etc\n   grep              Print lines matching a pattern\n   log               Show commit logs\n   show              Show various types of objects\n   status            Show the working tree status\n\ngrow, mark and tweak your common history\n   branch            List, create, or delete branches\n   commit            Record changes to the repository\n   merge             Join two or more development histories together\n   rebase            Reapply commits on top of another base tip\n   reset             Reset current HEAD to the specified state\n   switch            Switch branches\n   tag               Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch             Download objects and refs from another repository\n   pull              Fetch from and integrate with another repository or a local branch\n   push              Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m19:18:40.633090 [debug] [MainThread]: STDERR: "b''"
+[0m19:18:40.633725 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m19:18:40.634450 [info ] [MainThread]: Connection:
+[0m19:18:40.635479 [info ] [MainThread]:   database: <database name>
+[0m19:18:40.636262 [info ] [MainThread]:   schema: main
+[0m19:18:40.636974 [info ] [MainThread]:   schemas_and_paths: {'main': '/my_project/data/etl.db'}
+[0m19:18:40.637625 [info ] [MainThread]:   schema_directory: /my_project/data
+[0m19:18:40.640056 [info ] [MainThread]: Registered adapter: sqlite=1.4.0
+[0m19:18:40.641661 [debug] [MainThread]: Acquiring new sqlite connection 'debug'
+[0m19:18:40.642303 [debug] [MainThread]: Using sqlite connection "debug"
+[0m19:18:40.642846 [debug] [MainThread]: On debug: select 1 as id
+[0m19:18:40.643369 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m19:18:40.649054 [debug] [MainThread]: On debug: No close available on handle
+[0m19:18:40.650128 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m19:18:40.651304 [info ] [MainThread]: [31m1 check failed:[0m
+[0m19:18:40.652133 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Runtime Error
+  Database Error
+    unable to open database file
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m19:18:40.653508 [debug] [MainThread]: Command `dbt debug` failed at 19:18:40.653266 after 0.25 seconds
+[0m19:18:40.654177 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m19:18:40.654826 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbd9680add0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbd968b9f50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbd968b9fd0>]}
+[0m19:18:40.655636 [debug] [MainThread]: Flushing usage events
