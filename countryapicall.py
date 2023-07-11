@@ -10,7 +10,7 @@ print(r.status_code)
 countries = r.json()
 print(countries)
 
-# access first element in list so we can avoid metadata list and access country info
+# access second element in list so we can avoid metadata list and access country info
 countries = countries[1]
 
 # creates a pretty print output to establish better view of structure
@@ -35,8 +35,20 @@ extracted_countries = [
 ]
 
 # Create the DataFrame from the extracted data
-df_country = pd.DataFrame(extracted_countries)
+df = pd.DataFrame(extracted_countries)
+print(df)
+
+print(df.columns)
+
+#normalising income level data
+df_income_level = df[['incomeLevel_id', 'incomeLevel_iso2code', 'incomeLevel_value']]
+print(df_income_level)
+
+
+#normalising country level data
+df_country = df[['id', 'iso2Code', 'name', 'capitalCity', 'longitude', 'latitude',  'lendingType']]
 print(df_country)
+
 
 # Create a connection to the SQLite database
 conn = sqlite3.connect('wdi_trade_indicators.db')
@@ -57,7 +69,27 @@ rows = (cursor.fetchall())
 for row in rows:
     print(row)
 
+
+
+
+df_income_level.to_sql('incomelevel', conn, if_exists='replace')
+cursor = conn.cursor()
+query = "SELECT * FROM incomelevel"
+cursor.execute(query)
+rows = cursor.fetchall()
+for row in rows:
+    print(row)
+
+# Checking datatypes none given
+cursor.execute("PRAGMA table_info(countries)")
+rows = (cursor.fetchall())
+
+for row in rows:
+    print(row)
+
+
 # NEED TO ASSIGN DATATYPES
+
 
 # Don't forget to close the connection
 #conn.close()

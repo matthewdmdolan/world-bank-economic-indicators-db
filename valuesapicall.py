@@ -2,44 +2,42 @@ import requests
 import json
 import pandas as pd
 import sqlite3
+import time
+from indicatorsapicall import df_all_indicators_list
 
-# api call
-URL = "http://api.worldbank.org/v2/country/all/indicator/PA.NUS.PPP?format=json&per_page=10000"
-r = requests.get(URL)
-print(r.status_code)
-combined = r.json()
-print(combined)
+# API base URL
+API_BASE_URL = "http://api.worldbank.org/v2/country/all/indicator"
 
-# def get_indicator_data(indicator_codes):
-#     data = {}
-#     base_url = "http://api.worldbank.org/v2/country/all/indicator/{}?format=json&per_page=2000"
-#     for code in indicator_codes:
-#         # Format the URL with the current indicator code
-#         url = base_url.format(code)
-#         # Make the API request
-#         response = requests.get(url)
-#         # Check the status code of the response
-#         if response.status_code == 200:
-#             # If successful, save the data
-#             data[code] = response.json()
-#         else:
-#             print(f"Failed to retrieve data for indicator {code}. Status code: {response.status_code}")
-#         # Sleep for a while to avoid hitting the rate limit
-#         time.sleep(1)
-#     return data
-#
-# # Usage:
-# indicator_codes = ["SP.POP.TOTL", "NY.GDP.MKTP.CD", ...]  # replace with your actual indicator codes
-# data = get_indicator_data(indicator_codes)
+# List of indicator codes
+df_all_indicators_list = df_all_indicators_list  # Replace with your full list of indicator codes
 
+# Container for combined data
+combined_data = []
 
-# access first element in list so we can avoid metadata list and access country info
-combined = combined[1]
+# Iterate over indicator codes
+for indicator_code in df_all_indicators_list:
+    # API call for each indicator
+    url = f"{API_BASE_URL}/{indicator_code}?format=json&per_page=10000"
+    response = requests.get(url)
+    print(response.status_code)
 
-# creates a pretty print output to establish better view of structure
+    # Extract data from the response if available
+    if response.status_code == 200:
+        data = response.json()
+        if len(data) > 1:
+            data = data[1]  # Skip metadata
+
+            # Append to combined data
+            combined_data.extend(data)
+
+    # Pause for a while before making the next API call
+    time.sleep(1)  # Adjust the sleep period as needed
+
+# Create a pretty print output to establish a better view of the structure
 with open('output_combined.json', 'w') as f:
-    json.dump(combined, f, indent=10)
+    json.dump(combined_data, f, indent=10)
 
+# Extract relevant fields from combined data
 extracted_combined = [
     {
         'id': item['indicator']['id'],
@@ -48,33 +46,34 @@ extracted_combined = [
         'value': item['value'],
         'unit': item['unit']
     }
-    for item in combined
+    for item in combined_data
 ]
 
 # Create the DataFrame from the extracted data
 df_combined = pd.DataFrame(extracted_combined)
 print(df_combined)
 
-print(df_combined.dtypes)
-
+# Connect to the SQLite database
 conn = sqlite3.connect('wdi_trade_indicators.db')
 
-# Write the data to a table called 'my_table' in the SQLite database
-df_combined.to_sql('trade_data', conn, if_exists='replace')
+# Write the data to a table called 'values' in the SQLite database
+df_combined.to_sql('values', conn, if_exists='replace')
+
+# Query the table to verify the data
 cursor = conn.cursor()
-query = "SELECT * FROM trade_data"
+query = "SELECT * FROM values"
 cursor.execute(query)
 rows = cursor.fetchall()
 
 for row in rows:
     print(row)
 
-##Checking datatypes none given
-cursor.execute("PRAGMA table_info(trade_data)")
-rows = (cursor.fetchall())
+# Check the data types of the table columns
+cursor.execute("PRAGMA table_info(values)")
+rows = cursor.fetchall()
 
 for row in rows:
     print(row)
 
-# Don't forget to close the connection
+# Close the connection
 conn.close()
