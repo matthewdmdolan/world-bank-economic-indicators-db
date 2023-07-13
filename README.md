@@ -24,7 +24,8 @@ The world bank indicators are an amazing data source for any one interested in s
 20. External Debt
 21. Trade
 
+Despite the multitude of topics, only economy and growth statistics have been pulled for the time being due to some upcoming time-series analysis of financial data at work. As a result, I wanted a robust, accessible dataset to trial some of the more obscure r packages on. 
 
-Despite the multitude of topics, only economy and growth statistics have been pulled for the time being due to some upcoming time-series analysis of financial data at work. As a result, I wanted a robust dataset to trial some of the more obscure r packages on. 
+Consequently, I decided to build a simple data model using the economy and growth metrics. Following the API calls, the data was then  normalised to tables in SQLite with a values fact table, alongside country, income level, an indicators info and also a source table for all the different government sources to provide context. 
 
-Consequently, I decided to build a simple data model using the economy and growth metrics. Following the API calls, the data was then  normalised to a model with a values fact table, alongside country, income level.
+Lunar modeller was used to visualise the data model. Pytest has been utilised and I tried to introduce dbt but the sqlite package is sub-optimal due to it being a third-party community project.
