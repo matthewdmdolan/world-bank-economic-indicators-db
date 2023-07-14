@@ -2,7 +2,7 @@
 
 # Introduction 
 
-As someone who is passionate about social and economic research, having an acessible data model for countries across the globe proved to be a very exciting concept. In my role, I often have to perform EDAs on economic data and having a dataset to experiment with to prototype some analyses using more obscure R stats packages would save me a lot of time. 
+As someone who is passionate about social and economic research, having an acessible data model for countries across the globe proved to be a very exciting concept. In my role, I often have to perform EDAs on economic data, and having a familiar dataset to prototype some analyses using the more obscure R stats packages, would save me a lot of time and headache.
 
 # Data
 
