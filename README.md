@@ -1,5 +1,11 @@
 # World Bank Development Indicators Data Model
 
+# Introduction 
+
+As someone who is passionate about social and economic research, having an acessible data model for countries across the globe proved to be a very exciting concept. In my role, I often have to perform EDAs on economic data and having a dataset to experiment with to prototype some analyses using more obscure R stats packages would save me a lot of time. 
+
+# Data
+
 The world bank indicators are an amazing data source for any one interested in social/economic research. The World Bank Indicators API provides access to nearly 16,000 time series indicators across a range of topics, listed below:
 
 1. Agriculture & Rural Development
@@ -24,7 +30,9 @@ The world bank indicators are an amazing data source for any one interested in s
 20. External Debt
 21. Trade
 
-Despite the multitude of topics, only economy and growth statistics have been pulled for the time being due to some upcoming time-series analysis of financial data at work. As a result, I wanted a robust, accessible dataset to trial some of the more obscure r packages on. 
+However, despite the multitude of topics, only economy and growth indicators have been extracted. 
+
+# Development
 
 Consequently, I decided to build a simple data model using the economy and growth metrics. Following the API calls, the data was then  normalised to tables in SQLite with a values fact table, alongside country, income level, an indicators info and also a source table for all the different government sources to provide context. 
 
