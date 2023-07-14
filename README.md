@@ -1,4 +1,4 @@
-# world-bank-economic-indicators-db
+# World Bank Development Indicators Data Model
 
 The world bank indicators are an amazing data source for any one interested in social/economic research. The World Bank Indicators API provides access to nearly 16,000 time series indicators across a range of topics, listed below:
 
